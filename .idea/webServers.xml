@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="154953f8-2caf-424f-9264-4848f4856615" name="PLA" url="http://192.168.0.112">
+        <fileTransfer host="192.168.0.112" port="20" rootFolder="files/PLA">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="20" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,43 @@
+{% extends "mainApp/wrapper.html"%}
+
+{% block content %}
+    <h1>Заповніть форму для додавання абонента</h1>
+
+    <form action = "" method="post">
+        {%  csrf_token %}
+        <div>
+            <label>
+                <span>ПІБ</span>
+                <input type="text" name="pib">
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Адреса</span>
+                <input type="text" name="adress" >
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Ос.рах</span>
+                <input type="text" name="osrah" >
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>№ лічильника</span>
+                <input type="text" name="meter" >
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Дата підпис. дог</span>
+                <input type="text" name="date" >
+            </label>
+        </div>
+
+        <input type="submit" value="Додати">
+
+    </form>
+
+{% endblock %}

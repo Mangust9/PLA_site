@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="abonent@192.168.0.103">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="abonent">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <schema id="9" parent="1" name="plm">
+      <Visible>1</Visible>
+    </schema>
+    <table id="10" parent="2" name="abonent"/>
+    <table id="11" parent="2" name="abonent_abonent"/>
+    <table id="12" parent="2" name="abonent_oplata"/>
+    <table id="13" parent="2" name="abonent_rahunok"/>
+    <table id="14" parent="2" name="auth_group"/>
+    <table id="15" parent="2" name="auth_group_permissions"/>
+    <table id="16" parent="2" name="auth_permission"/>
+    <table id="17" parent="2" name="auth_user"/>
+    <table id="18" parent="2" name="auth_user_groups"/>
+    <table id="19" parent="2" name="auth_user_user_permissions"/>
+    <table id="20" parent="2" name="django_admin_log"/>
+    <table id="21" parent="2" name="django_content_type"/>
+    <table id="22" parent="2" name="django_migrations"/>
+    <table id="23" parent="2" name="django_session"/>
+    <table id="24" parent="2" name="django_site"/>
+    <table id="25" parent="2" name="landing_subscriber"/>
+    <table id="26" parent="2" name="oplata"/>
+    <table id="27" parent="2" name="rahunok"/>
+    <table id="28" parent="9" name="django_migrations"/>
+    <table id="29" parent="9" name="gadget_hw_arduino"/>
+    <table id="30" parent="9" name="gadget_hw_gadget_hw"/>
+    <table id="31" parent="9" name="gadget_hw_meter"/>
+    <column id="32" parent="10" name="Osrah">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="10" name="PIB">
+      <Position>2</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="10" name="Adress">
+      <Position>3</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="10" name="Meter">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="10" name="date">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <key id="37" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Osrah</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="11" name="Osrah">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="11" name="PIB">
+      <Position>2</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="11" name="Adress">
+      <Position>3</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="11" name="Meter">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="11" name="date">
+      <Position>5</Position>
+      <DataType>varchar(70)|0</DataType>
+    </column>
+    <key id="43" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Osrah</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="12" name="idoplata">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="12" name="abonent_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="46" parent="12" name="from_date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="12" name="saldo">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="12" name="annotation">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="49" parent="12" name="dateOpl">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="50" parent="12" name="abonent_oplata_abonent_id_1000decc_fk_abonent_abonent_Osrah">
+      <ColNames>abonent_id</ColNames>
+    </index>
+    <key id="51" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idoplata</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="52" parent="12" name="abonent_oplata_abonent_id_1000decc_fk_abonent_abonent_Osrah">
+      <ColNames>abonent_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>abonent_abonent</RefTableName>
+      <RefColNames>Osrah</RefColNames>
+    </foreign-key>
+    <column id="53" parent="13" name="idRahunok">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="13" name="abonent_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="13" name="dataRah">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="13" name="pokaz1">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="13" name="pokaz2">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="13" name="SpozKWT">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="13" name="SpozUAH">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="60" parent="13" name="abonent_rahunok_abonent_id_4687a0cb_fk_abonent_abonent_Osrah">
+      <ColNames>abonent_id</ColNames>
+    </index>
+    <key id="61" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idRahunok</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="62" parent="13" name="abonent_rahunok_abonent_id_4687a0cb_fk_abonent_abonent_Osrah">
+      <ColNames>abonent_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>abonent_abonent</RefTableName>
+      <RefColNames>Osrah</RefColNames>
+    </foreign-key>
+    <column id="63" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="64" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="65" parent="14" name="name">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="67" parent="14" name="name">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="15" name="group_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="15" name="permission_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="71" parent="15" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <ColNames>group_id
+permission_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="72" parent="15" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+    </index>
+    <key id="73" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="74" parent="15" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <ColNames>group_id
+permission_id</ColNames>
+      <UnderlyingIndexName>auth_group_permissions_group_id_permission_id_0cd325b0_uniq</UnderlyingIndexName>
+    </key>
+    <foreign-key id="75" parent="15" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
+      <ColNames>group_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_group</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="15" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_permission</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="77" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="78" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="16" name="content_type_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="16" name="codename">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="81" parent="16" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <ColNames>content_type_id
+codename</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="83" parent="16" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <ColNames>content_type_id
+codename</ColNames>
+      <UnderlyingIndexName>auth_permission_content_type_id_codename_01ab375a_uniq</UnderlyingIndexName>
+    </key>
+    <foreign-key id="84" parent="16" name="auth_permission_content_type_id_2f476e4b_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="85" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="86" parent="17" name="password">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="17" name="last_login">
+      <Position>3</Position>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <column id="88" parent="17" name="is_superuser">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="17" name="username">
+      <Position>5</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="17" name="first_name">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="17" name="last_name">
+      <Position>7</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="17" name="email">
+      <Position>8</Position>
+      <DataType>varchar(254)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="17" name="is_staff">
+      <Position>9</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="17" name="is_active">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="17" name="date_joined">
+      <Position>11</Position>
+      <DataType>datetime(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="96" parent="17" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="98" parent="17" name="username">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+    <column id="99" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="100" parent="18" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="18" name="group_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="102" parent="18" name="auth_user_groups_group_id_97559544_fk_auth_group_id">
+      <ColNames>group_id</ColNames>
+    </index>
+    <index id="103" parent="18" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
+      <ColNames>user_id
+group_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="104" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="105" parent="18" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
+      <ColNames>user_id
+group_id</ColNames>
+      <UnderlyingIndexName>auth_user_groups_user_id_group_id_94350c0c_uniq</UnderlyingIndexName>
+    </key>
+    <foreign-key id="106" parent="18" name="auth_user_groups_user_id_6a12ed8b_fk_auth_user_id">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="107" parent="18" name="auth_user_groups_group_id_97559544_fk_auth_group_id">
+      <ColNames>group_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_group</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="108" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="109" parent="19" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="19" name="permission_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="111" parent="19" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
+      <ColNames>user_id
+permission_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="112" parent="19" name="auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+    </index>
+    <key id="113" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="114" parent="19" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
+      <ColNames>user_id
+permission_id</ColNames>
+      <UnderlyingIndexName>auth_user_user_permissions_user_id_permission_id_14a6b632_uniq</UnderlyingIndexName>
+    </key>
+    <foreign-key id="115" parent="19" name="auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="116" parent="19" name="auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_permission</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="117" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="118" parent="20" name="action_time">
+      <Position>2</Position>
+      <DataType>datetime(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="20" name="object_id">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="120" parent="20" name="object_repr">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="20" name="action_flag">
+      <Position>5</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="20" name="change_message">
+      <Position>6</Position>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="20" name="content_type_id">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="124" parent="20" name="user_id">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="125" parent="20" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+    </index>
+    <index id="126" parent="20" name="django_admin_log_user_id_c564eba6_fk">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="127" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="128" parent="20" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="129" parent="20" name="django_admin_log_user_id_c564eba6_fk">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>abonent</RefSchemaName>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="130" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="21" name="app_label">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="21" name="model">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="133" parent="21" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="135" parent="21" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <UnderlyingIndexName>django_content_type_app_label_model_76bd3d3b_uniq</UnderlyingIndexName>
+    </key>
+    <column id="136" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="137" parent="22" name="app">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="22" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="22" name="applied">
+      <Position>4</Position>
+      <DataType>datetime(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="140" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="141" parent="23" name="session_key">
+      <Position>1</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="142" parent="23" name="session_data">
+      <Position>2</Position>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="143" parent="23" name="expire_date">
+      <Position>3</Position>
+      <DataType>datetime(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="144" parent="23" name="django_session_expire_date_a5c62663">
+      <ColNames>expire_date</ColNames>
+    </index>
+    <key id="145" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>session_key</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="146" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="147" parent="24" name="domain">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="148" parent="24" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="149" parent="24" name="django_site_domain_a2e37b91_uniq">
+      <ColNames>domain</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="150" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="151" parent="24" name="django_site_domain_a2e37b91_uniq">
+      <ColNames>domain</ColNames>
+      <UnderlyingIndexName>django_site_domain_a2e37b91_uniq</UnderlyingIndexName>
+    </key>
+    <column id="152" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="153" parent="25" name="email">
+      <Position>2</Position>
+      <DataType>varchar(254)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="154" parent="25" name="name">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="155" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="156" parent="26" name="idoplata">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="157" parent="26" name="from_date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="158" parent="26" name="saldo">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="159" parent="26" name="idStala">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="160" parent="26" name="annotation">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="161" parent="26" name="dateOpl">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <key id="162" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idoplata</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="163" parent="27" name="idRahunok">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="164" parent="27" name="idStala">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="27" name="dataRah">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="166" parent="27" name="pokaz1">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="167" parent="27" name="pokaz2">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="168" parent="27" name="SpozKWT">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="169" parent="27" name="SpozUAH">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="170" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idRahunok</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="171" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="172" parent="28" name="app">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="173" parent="28" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="174" parent="28" name="applied">
+      <Position>4</Position>
+      <DataType>datetime(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="175" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="176" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="177" parent="29" name="phase_1">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="178" parent="29" name="phase_2">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="179" parent="29" name="phase_3">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="180" parent="29" name="phase_4">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="181" parent="29" name="oil_level">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="182" parent="29" name="temp">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="183" parent="29" name="door">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="184" parent="29" name="date">
+      <Position>9</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="185" parent="29" name="gadget_HW_id">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="186" parent="29" name="gadget_HW_arduino_gadget_HW_id_f8e67e52_fk_gadget_HW">
+      <ColNames>gadget_HW_id</ColNames>
+    </index>
+    <key id="187" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="188" parent="29" name="gadget_HW_arduino_gadget_HW_id_f8e67e52_fk_gadget_HW">
+      <ColNames>gadget_HW_id</ColNames>
+      <RefSchemaName>plm</RefSchemaName>
+      <RefTableName>gadget_hw_gadget_hw</RefTableName>
+      <RefColNames>idGadget</RefColNames>
+    </foreign-key>
+    <column id="189" parent="30" name="idGadget">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="190" parent="30" name="PIB">
+      <Position>2</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="191" parent="30" name="Adress">
+      <Position>3</Position>
+      <DataType>varchar(70)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="192" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idGadget</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="193" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="194" parent="31" name="kVArh_p">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="195" parent="31" name="kVArh_n">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="196" parent="31" name="kVAh">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="197" parent="31" name="cur_sum_kW">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="198" parent="31" name="cur_L1_kW">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="199" parent="31" name="cur_L2_kW">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="200" parent="31" name="cur_L3_kW">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="201" parent="31" name="cur_sum_kVAr_p">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="202" parent="31" name="cur_L1_kVAr_p">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="203" parent="31" name="cur_L2_kVAr_p">
+      <Position>11</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="204" parent="31" name="cur_L3_kVAr_p">
+      <Position>12</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="205" parent="31" name="cur_sum_kVAr_n">
+      <Position>13</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="206" parent="31" name="cur_L1_kVAr_n">
+      <Position>14</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="207" parent="31" name="cur_L2_kVAr_n">
+      <Position>15</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="208" parent="31" name="cur_L3_kVAr_n">
+      <Position>16</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="209" parent="31" name="cur_sum_kVA">
+      <Position>17</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="210" parent="31" name="cur_L1_kVA">
+      <Position>18</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="211" parent="31" name="cur_L2_kVA">
+      <Position>19</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="212" parent="31" name="cur_L3_kVA">
+      <Position>20</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="213" parent="31" name="cur_sum_A">
+      <Position>21</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="214" parent="31" name="cur_L1_A">
+      <Position>22</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="215" parent="31" name="cur_L2_A">
+      <Position>23</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="216" parent="31" name="cur_L3_A">
+      <Position>24</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="217" parent="31" name="cur_sum_V">
+      <Position>25</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="218" parent="31" name="cur_L1_V">
+      <Position>26</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="219" parent="31" name="cur_L2_V">
+      <Position>27</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="220" parent="31" name="cur_L3_V">
+      <Position>28</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="221" parent="31" name="cur_F">
+      <Position>29</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="222" parent="31" name="gadget_HW_id">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="223" parent="31" name="gadget_HW_meter_gadget_HW_id_81afd7ed_fk_gadget_HW">
+      <ColNames>gadget_HW_id</ColNames>
+    </index>
+    <key id="224" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="225" parent="31" name="gadget_HW_meter_gadget_HW_id_81afd7ed_fk_gadget_HW">
+      <ColNames>gadget_HW_id</ColNames>
+      <RefSchemaName>plm</RefSchemaName>
+      <RefTableName>gadget_hw_gadget_hw</RefTableName>
+      <RefColNames>idGadget</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

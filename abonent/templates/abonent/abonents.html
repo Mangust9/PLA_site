@@ -1,0 +1,41 @@
+
+{% extends "mainApp/wrapper.html"%}
+
+
+
+
+{% block header %}
+    {% include "mainApp/includes/header.html"%}
+    <p><a href="{% url 'add_abonent' %}" class="btn btn-primary btn-lg">Добавити &raquo;</a></p>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div style=" width: 100%; float: left;">
+
+        <table style="margin: auto">
+        <th style ="text-align: center">П.І.Б</th>
+        <th style ="text-align: center">Адреса</th>
+        <th style ="text-align: center">№ лічилька</th>
+        <th style ="text-align: center">Дата підписання</th>
+            {% for abonent in abonent %}
+            <tr>
+                <td style ="border: 1px solid black; text-align: center"> <a href={{ abonent.osrah }}> {{abonent.pib }}</a></td>
+                <td style ="border: 1px solid black; text-align: center">{{ abonent.adress }}</td>
+                <td style ="border: 1px solid black; text-align: center"> {{abonent.meter }}</td>
+                <td style ="border: 1px solid black; text-align: center"> {{abonent.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+    </div>
+        <div class="clear">
+
+    </div>
+
+
+
+{% endblock %}

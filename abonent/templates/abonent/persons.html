@@ -1,0 +1,55 @@
+{% extends "mainApp/wrapper.html"%}
+
+
+{% block header %}
+    {% include "mainApp/includes/header.html"%}
+    <input type="submit" value="Видалити">
+
+{% endblock %}
+
+
+{% block content %}
+
+    <h2>{{ pib }}</h2>
+    <h4>Поточний баланс: {{ balans.sum }}</h4>
+    <p>{{ adress }}</p>
+
+    <table align="left", width="40%">
+        <th style ="text-align: center">Дата</th>
+        <th style ="text-align: center">Нарахування</th>
+        <th style ="text-align: center">Коментар</th>
+        <th style ="text-align: center">Дата оплати</th>
+
+            {% for date, saldo, annotation, date_opl in zip_list1 %}
+
+                <tr>
+                    <td style ="border: 1px solid black;text-align: center"> {{ date }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ saldo }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ annotation }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ date_opl }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+
+    <table align="right", width="50%">
+        <th style ="text-align: center">Дата</th>
+        <th style ="text-align: center">поч.показн</th>
+        <th style ="text-align: center">кін.показн</th>
+        <th style ="text-align: center">спожито kWt</th>
+        <th style ="text-align: center">спожито UAH</th>
+
+            {% for date_pokaz, pokaz1, pokaz2, spozKWT, spozUAH in zip_list2 %}
+
+                <tr>
+                    <td style ="border: 1px solid black;text-align: center"> {{ date_pokaz }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ pokaz1 }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ pokaz2 }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ spozKWT }}</td>
+                    <td style ="border: 1px solid black;text-align: center"> {{ spozUAH }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+
+{% endblock %}
