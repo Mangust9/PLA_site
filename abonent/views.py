@@ -50,14 +50,14 @@ def person_detail(request, person):
 
 def add_abonent(request):
     if request.POST:
-        abonent= Abonent(pib=request.POST.get('pib'),
+        abonent = Abonent(pib=request.POST.get('pib'),
                          adress=request.POST.get('adress'),
                          osrah=request.POST.get('osrah'),
                          meter=request.POST.get('meter'),
                          date=request.POST.get('date'))
         abonent.save()
 
-        return  HttpResponseRedirect(reverse('abonent_list'))
+        return HttpResponseRedirect(reverse('abonent_list'))
 
     return render(request, 'abonent/add_abonent.html')
 

@@ -76,6 +76,7 @@ WSGI_APPLICATION = 'PLA_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -93,6 +94,8 @@ DATABASES = {
         'HOST': '192.168.0.112',
         'PORT': '3307'
     }
+
+
 }
 
 
